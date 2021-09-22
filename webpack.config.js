@@ -30,7 +30,11 @@ module.exports = {
                 "css-loader",
                 "sass-loader",
               ],
-            }
+            },
+            {
+              test: /\.html$/i,
+              loader: "html-loader",
+            },
         ],
     },
     resolve: {

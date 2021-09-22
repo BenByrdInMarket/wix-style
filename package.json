@@ -37,6 +37,7 @@
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-stylable": "^4.6.0",
+    "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.3.0",
     "node-sass": "^6.0.1",
