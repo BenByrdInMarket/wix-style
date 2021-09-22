@@ -1,8 +1,13 @@
 const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
+    entry: './src/index.tsx',
+    output: {
+      filename: 'main.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
     mode: 'development',
     devtool: 'source-map',
     module: {
@@ -31,6 +36,6 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
     },
-    plugins: [new StylableWebpackPlugin(), new HtmlWebpackPlugin({ title: 'Stylable App' })],
-    cache: { type: 'filesystem' },
+    plugins: [new StylableWebpackPlugin()],
+    cache: { type: 'filesystem' }
 };

@@ -7,5 +7,5 @@ ReactDOM.render(
   <React.StrictMode>
     <App/>
   </React.StrictMode>,
-  document.body.appendChild(document.createElement('div'))
+  document.getElementById('root')
 );
