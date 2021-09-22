@@ -1,5 +1,7 @@
 const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -18,6 +20,14 @@ module.exports = {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
                 type: 'asset',
             },
+            {
+              test: /\.scss$/,
+              use: [
+                "style-loader",
+                "css-loader",
+                "sass-loader",
+              ],
+            }
         ],
     },
     resolve: {

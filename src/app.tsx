@@ -1,15 +1,16 @@
 import type React from 'react';
-import { st, classes } from './app.st.css';
-import { Header } from './header';
+import {Button} from 'wix-style-react';
 
 export interface AppProps {
-    className?: string;
+  className?: string;
 }
 
-export const App: React.VFC<AppProps> = ({ className }) => {
-    return (
-        <main className={st(classes.root, className)}>
-            <Header className={classes.header} />
-        </main>
-    );
+export const App: React.VFC<AppProps> = () => {
+  return (
+    <main>
+      <Button>
+        Click me
+      </Button>
+    </main>
+  );
 };

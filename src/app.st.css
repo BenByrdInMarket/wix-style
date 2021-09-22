@@ -1,4 +1,5 @@
-.root {}
+.root {
+}
 
 :import {
     -st-from: './header.st.css';
