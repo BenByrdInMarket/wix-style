@@ -1,5 +1,6 @@
 import type React from 'react';
-import {Button} from 'wix-style-react';
+import SimpleSidebar from './sidebar';
+import StepperWithState from "./stepper";
 
 export interface AppProps {
   className?: string;
@@ -7,10 +8,9 @@ export interface AppProps {
 
 export const App: React.VFC<AppProps> = () => {
   return (
-    <main>
-      <Button>
-        Click me
-      </Button>
-    </main>
+    <>
+      <SimpleSidebar />
+      <StepperWithState />
+    </>
   );
 };
