@@ -18,6 +18,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@storybook/components": "^6.3.8",
     "@stylable/runtime": "^4.6.0",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
