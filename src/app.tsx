@@ -1,5 +1,5 @@
 import type React from 'react';
-import {FilePicker} from "wix-style-react";
+import {FilePicker, AreaChart} from "wix-style-react";
 import Heading from "./Heading";
 import ComponentWrapper from "./ComponentWrapper";
 import StepperWithState from "./stepper";
@@ -13,6 +13,8 @@ import InnerWrapper from "./InnerWrapper";
 import FileUploadExample from "./FileUpload";
 import {FormsExample} from "./FormsExample";
 import {FormCardExample} from "./FormCardExample";
+import {RichTextExample} from "./RichTextExample";
+import {StatisticsCardExample} from "./StatisticsCardExample";
 
 export interface AppProps {
   className?: string;
@@ -32,6 +34,36 @@ export const App: React.VFC<AppProps> = () => {
       <ComponentWrapper title={'Form Card'}>
         <InnerWrapper>
           <FormCardExample />
+        </InnerWrapper>
+      </ComponentWrapper>
+
+      <ComponentWrapper title={'Rich Text'}>
+        <RichTextExample />
+      </ComponentWrapper>
+
+      <ComponentWrapper title={'Statistics Card'}>
+        <StatisticsCardExample />
+      </ComponentWrapper>
+
+      <ComponentWrapper title={'Area Chart'}>
+        <InnerWrapper>
+          <AreaChart
+            data={[
+              {
+                value: 1170,
+                label: '12/9',
+              },
+              {
+                value: 2030,
+                label: '12/10',
+              },
+              {
+                value: 1500,
+                label: 'Nov',
+              },
+            ]}
+            tooltipContent={(item) => 'tooltip ' + item.label}
+          />
         </InnerWrapper>
       </ComponentWrapper>
 
